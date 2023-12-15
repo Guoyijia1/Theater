@@ -6,6 +6,10 @@ public class ReadData : MonoBehaviour
 {
     public ArduinoData arduinoData; // Drag and drop the GameObject with ArduinoData script in the Inspector
 
+    public GameObject TriggerDoor;
+    public GameObject Door;
+
+
 
     private const float REAL_SECOND_PER_INGAME_DAY = 60f;
 
@@ -33,10 +37,16 @@ public class ReadData : MonoBehaviour
         //Debug.Log("Distance from AnotherScript: " + distanceValue + ", Position: " + positionValue);
         Debug.Log("Position: " + positionValue);
 
-        clockHourHandTransform.eulerAngles = new Vector3(0, 0, -positionValue);
+        clockHourHandTransform.eulerAngles = new Vector3(-positionValue, 0, 0);
 
         float hoursPerDay = 24f;
-        clockMinuteHandTransform.eulerAngles = new Vector3(0, 0, -positionValue * hoursPerDay);
+        clockMinuteHandTransform.eulerAngles = new Vector3(-positionValue * hoursPerDay, 0, 0);
+
+        if (positionValue == -5)
+        {
+            TriggerDoor.SetActive(true);
+            Door.SetActive(false);
+        }
 
     }
 
