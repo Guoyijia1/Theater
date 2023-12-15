@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ClockDoor.unity
+    guid: f76a97e34b0e74b6aaa4b262576ff659
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 33de929e817e548d38aaf69d7aae6498
+  - enabled: 1
+    path: Assets/Scenes/BoxGenerator.unity
+    guid: c6d8f6c05e1d14f9fa98e93c7d00cc5a
+  - enabled: 1
+    path: Assets/Scenes/MovingPlatform.unity
+    guid: e8c0078343c2e45e681588d6203e9b44
   m_configObjects: {}

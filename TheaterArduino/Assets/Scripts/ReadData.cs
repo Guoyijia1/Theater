@@ -42,7 +42,7 @@ public class ReadData : MonoBehaviour
         float hoursPerDay = 24f;
         clockMinuteHandTransform.eulerAngles = new Vector3(-positionValue * hoursPerDay, 0, 0);
 
-        if (positionValue == -5)
+        if (positionValue == -10)
         {
             TriggerDoor.SetActive(true);
             Door.SetActive(false);
